@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flask-app-into-gks
+  name: flask-app-into-gks-deployment
   labels:
     app: flask-app-into-gks
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: flask-app-into-gks
-template:
-  metadata:
-    labels:
-      app: flask-app-into-gks
-  spec:
-    containers:
-    - name: flask-app-into-gks
-      image: gcr.io/instant-pivot-343711/flask-app-into-gks:version1.0
-      ports:
-      - containerPort: 80
-      env:
-      - name: PORT
+  template:
+    metadata:
+      labels:
+        app: flask-app-into-gks
+    spec:
+      containers:
+      - name: flask-app-into-gks
+        image: gcr.io/instant-pivot-343711/flask-app-into-gks:version1.0
+        ports:
+        - containerPort: 80
+        env:
+        - name: PORT
 value : 80
