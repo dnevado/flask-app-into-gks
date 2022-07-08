@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask-app-into-gks
-        image: gcr.io/instant-pivot-343711/flask-app-into-gks:latest
+        image: gcr.io/instant-pivot-343711/flask-app-into-gks:v0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
