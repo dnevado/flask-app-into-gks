@@ -3,10 +3,10 @@ apiVersion: extensions/v1beta1
   metadata:
 	  name: flask-app-into-gks
   spec:
-	replicas: 1
-	selector:
-	  matchLabels:
-	    app: flask-app-into-gks
+	  replicas: 1
+	  selector:
+	    matchLabels:
+	     app: flask-app-into-gks
 	template:
 	  metadata:
 	    labels:
