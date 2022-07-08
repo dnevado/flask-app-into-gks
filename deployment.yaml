@@ -1,23 +1,22 @@
 apiVersion: extensions/v1beta1
   kind: Deployment
   metadata:
-	name: my-app
+	  name: flask-app-into-gks
   spec:
 	replicas: 1
 	selector:
 	  matchLabels:
-	    app: my-app
+	    app: flask-app-into-gks
 	template:
 	  metadata:
 	    labels:
-	      app: my-app
+	      app: flask-app-into-gks
 	  spec:
 	    containers:
-	    - name: my-app
-	      image: "gcr.io/<project-name>/app-image:version1.0"
+	    - name: flask-app-into-gks
+	      image: gcr.io/instant-pivot-343711/flask-app-into-gks:version1.0
 	      ports:
 	      - containerPort: 80
 	      env:
 	      - name: PORT
-        
-value: 80
+value : 80
