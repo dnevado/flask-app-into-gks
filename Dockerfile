@@ -3,6 +3,6 @@ WORKDIR /app
 ADD . /app
 	
 RUN pip install -r requirements.txt
-EXPOSE 80
-#CMD flask run -h 0.0.0.0 -p 80
+EXPOSE 5000
+#CMD flask run -h 0.0.0.0 -p 5000
 CMD ["python", "app.py"]
